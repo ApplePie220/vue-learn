@@ -1,6 +1,13 @@
 <template>
 <div class="product-list">
-  <h1>Тумбочки</h1>
+  <div class="flex top-information">
+    <h1>Тумбочки</h1>
+    <my-input v-model="searchText"/>
+    {{ searchText }}
+    <button>
+      Найти
+    </button>
+  </div>
   <ul class="list-default flex">
     <li
         v-for="(product, index) in products"
@@ -20,12 +27,14 @@
 
 <script>
 import ProductCard from "./ProductCard.vue";
+import MyInput from "./MyInput.vue";
 
 export default {
   name: "ProductList",
-  components: {ProductCard},
+  components: {MyInput, ProductCard},
   data() {
     return {
+      searchText: '',
       products: [
         {
           title: "Тумбочка Tesammans",
@@ -56,7 +65,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 li {
   margin-right: 20px;
 }

@@ -24,9 +24,18 @@ export default {
         return value.length < 80
       }
     },
-    price: Number,
-    imgUrl: String,
-    count: Number
+    price: {
+      type: Number,
+      required: true
+    } ,
+    imgUrl: {
+      type: String,
+      default: 'https://hoff.ru/upload/iblock/21e/n4te02siu89ecm6zsh3nsd0gt0ve29e7.jpg'
+    },
+    count: {
+      type: Number,
+      default: 0
+    }
   },
   methods: {
     addToBasket(){
@@ -36,7 +45,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .product-card {
   border: 1px solid rgb(211, 211, 211);
   padding: 20px 15px;

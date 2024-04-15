@@ -1,0 +1,21 @@
+<script>
+export default {
+  props: ['modelValue'],
+  emits: ['update:modelValue']
+}
+</script>
+
+<template>
+<input type="text" class="search"
+       :value="modelValue"
+       @input="$emit('update:modelValue', $event.target.value)"
+>
+</template>
+
+<style scoped lang="scss">
+input {
+  height: 25px;
+  margin-left: 40px;
+}
+
+</style>
