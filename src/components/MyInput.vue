@@ -12,10 +12,10 @@ export default {
 >
 </template>
 
-<style scoped lang="scss">
+<style scoped>
 input {
   height: 25px;
   margin-left: 40px;
 }
-
 </style>
+

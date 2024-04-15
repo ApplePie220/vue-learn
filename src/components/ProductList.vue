@@ -8,7 +8,8 @@
       Найти
     </button>
   </div>
-  <ul class="list-default flex">
+  <div class="product-list-container">
+  <ul class="list-default">
     <li
         v-for="(product, index) in products"
         :key="index"
@@ -22,6 +23,7 @@
       />
     </li>
   </ul>
+  </div>
 </div>
 </template>
 
@@ -65,25 +67,45 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-li {
-  margin-right: 20px;
-}
-.top-information {
+<style scoped>
+.product-list {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  h1 {
-    margin-bottom: 0;
-  }
-  button {
-    background-color: rgb(221, 56, 56);
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 8px 14px;
-    display: block;
-    cursor: pointer;
-    margin-left: 10px;
-  }
+}
+
+.top-information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 22px;
 }
+
+.top-information button {
+  background-color: rgb(221, 56, 56);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 14px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.product-list-container {
+  overflow-x: auto;
+  width: 80%; /* Устанавливаем ширину */
+  display: flex; /* Включаем flexbox для центрирования */
+  justify-content: center; /* Центрируем по горизонтали */
+}
+
+.list-default {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.list-default li {
+  margin-right: 20px;
+}
+
 </style>

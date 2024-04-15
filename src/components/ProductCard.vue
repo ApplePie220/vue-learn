@@ -4,7 +4,7 @@
     :src="imgUrl"
     width="300px"
     >
-  <div class="product-card_info">
+  <div class="product-card__info">
     <h2>{{ title }}</h2>
     <p class="price">{{ price }}$</p>
     <p class="count">Доступно для доставки {{count}} шт.</p>
@@ -45,28 +45,33 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .product-card {
   border: 1px solid rgb(211, 211, 211);
   padding: 20px 15px;
-  &__info {
-    margin-top: 20px;
-    h2, .price {
-      font-weight: 500;
-    }
-    .count {
-      color: rgb(143, 143, 143);
-    }
-    button {
-      background-color: rgb(221, 56, 56);
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      padding: 8px 14px;
-      display: block;
-      cursor: pointer;
-      margin-top: 20px;
-    }
-  }
+}
+
+.product-card__info {
+  margin-top: 20px;
+}
+
+.product-card__info h2,
+.product-card__info .price {
+  font-weight: 500;
+}
+
+.product-card__info .count {
+  color: rgb(143, 143, 143);
+}
+
+.product-card__info button {
+  background-color: rgb(221, 56, 56);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 14px;
+  display: block;
+  cursor: pointer;
+  margin-top: 20px;
 }
 </style>
