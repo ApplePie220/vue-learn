@@ -1,6 +1,7 @@
 <script setup>
 // import ProductCard from './components/ProductCard.vue'
 import ProductList from "@/components/ProductList.vue";
+import SignUp from "@/components/SignUp.vue";
 
 </script>
 
@@ -8,7 +9,7 @@ import ProductList from "@/components/ProductList.vue";
 <!--    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />-->
 
     <div class="app">
-      <product-list />
+      <sign-up />
     </div>
 
 <!--  <main>-->
