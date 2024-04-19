@@ -1,4 +1,5 @@
 <script>
+
 export default {
   props: {
     title: {
@@ -11,6 +12,9 @@ export default {
       isRulesReaded: false
     }
   },
+  created() {
+    this.$log()
+  },
   beforeCreate() {
     console.log('beforeCreate')
   },
@@ -18,12 +22,8 @@ export default {
     closeModal() {
       this.$emit('close');
     },
-    onBodyScroll(){
-      const modalBody = this.$refs.modalBody
-      if (modalBody.clientWidth + modalBody.scrollTop > modalBody.scrollHeight) {
-        this.isRulesReaded = true;
-      }
-
+    onScroll(){
+      this.isRulesReaded = true;
     }
   }
 }
@@ -48,8 +48,7 @@ export default {
         </div>
         <div
             class="modal-body"
-            ref="modalBody"
-            @scroll="onBodyScroll"
+            @scroll="onScroll"
         >
           <slot></slot>
         </div>

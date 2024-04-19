@@ -4,6 +4,8 @@ import 'bootstrap'
 
 import { createApp } from 'vue'
 import App from './App.vue'
+import SimplePlugin from "@/plugins/simplePlugin.js";
 
-
-createApp(App).mount('#app')
+const app = createApp(App);
+app.use(SimplePlugin); // Подключаем плагин
+app.mount('#app');
