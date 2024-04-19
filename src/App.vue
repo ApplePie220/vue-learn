@@ -2,6 +2,7 @@
 // import ProductCard from './components/ProductCard.vue'
 import ProductList from "@/components/ProductList.vue";
 import SignUp from "@/components/SignUp.vue";
+import UserPage from "@/components/UserPage.vue";
 
 </script>
 
@@ -9,7 +10,7 @@ import SignUp from "@/components/SignUp.vue";
 <!--    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />-->
 
     <div class="app">
-      <sign-up />
+      <user-page />
     </div>
 
 <!--  <main>-->
