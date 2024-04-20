@@ -4,7 +4,7 @@
     <h1>
       Онлайн кинотеатр
     </h1>
-    <button type="button" class="btn btn-outline-dark" @click="$router.push({ name: 'films' })">Перейти к фильмам</button>
+    <button type="button" class="btn btn-outline-dark" @click="$router.push({name: 'films'})">Перейти к фильмам</button>
   </div>
 </template>
 

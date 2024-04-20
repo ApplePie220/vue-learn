@@ -16,7 +16,7 @@ export default [
             'Колин Фаррелл',
             'Лайн Рени',
         ],
-        img: 'https://avatars.mds.yandex.net/get-zen_doc/176438/pub_5e9af60dcb38e160287afbc4_5e9af69cfd59420be5ff40b9/scale_1200',
+        img: 'https://12-kanal.ru/upload/iblock/5a3/4.jpg',
         directors: ['Гай Ричи']
     },
     {

@@ -1,11 +1,22 @@
-<script setup>
-
-</script>
-
 <template>
-  $END$
+  <div class="not-found">
+    <h1>
+      Ничего не найдено
+    </h1>
+  </div>
 </template>
 
-<style scoped>
-
+<style lang="scss" scoped>
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  h1 {
+    color: #e10505;
+    font-size: 70px;
+    margin-bottom: 20px;
+  }
+}
 </style>

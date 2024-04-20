@@ -1,14 +1,13 @@
 import './assets/main.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap'
-import marked from 'marked';
-
+import router from './router/index.js'
 
 import { createApp } from 'vue'
 import App from './App.vue'
 import SimplePlugin from "@/plugins/simplePlugin.js";
 
 const app = createApp(App);
-app.use(SimplePlugin); // Подключаем плагин
-app.use(marked)
+app.use(router)
+
 app.mount('#app');

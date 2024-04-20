@@ -1,9 +1,6 @@
 <script setup>
-// import ProductCard from './components/ProductCard.vue'
-import ProductList from "@/components/ProductList.vue";
-import SignUp from "@/components/SignUp.vue";
-import UserPage from "@/components/UserPage.vue";
-import TextEditor from "@/components/TextEditor.vue";
+import UserCard from "@/components/UserCard.vue";
+import AllFilmsPage from "@/pages/AllFilmsPage.vue";
 
 </script>
 
@@ -11,12 +8,11 @@ import TextEditor from "@/components/TextEditor.vue";
 <!--    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />-->
 
     <div class="app">
-      <text-editor />
-      <user-page></user-page>
+      <RouterView ></RouterView>
     </div>
 
 <!--  <main>-->
-<!--    <TheWelcome />-->
+<!--    <RouterView />-->
 <!--  </main>-->
 </template>
 

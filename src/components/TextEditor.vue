@@ -21,7 +21,7 @@ export default {
 <template>
   <div class="text-editor">
   <textarea v-model="text"></textarea>
-    <div class="output-text" :innerText="marked(text)">
+    <div class="output-text" :innerText="combinedText">
     </div>
   </div>
 </template>
