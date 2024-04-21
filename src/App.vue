@@ -1,5 +1,5 @@
 <script setup>
-import UserCard from "@/components/UserCard.vue";
+import UserCard from "@/components/old/UserCard.vue";
 import AllFilmsPage from "@/pages/AllFilmsPage.vue";
 
 </script>

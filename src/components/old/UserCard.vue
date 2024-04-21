@@ -2,7 +2,7 @@
   <div class="user-card">
     <h1>Научу зарабывать 1 рубль в час</h1>
     <div class="main-information">
-      <img src="../assets/main.jpg" width="400px">
+      <img src="../../assets/main.jpg" width="400px">
       <div class="info">
         <h2>
           {{ getAuthorFullName }}

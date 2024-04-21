@@ -22,7 +22,22 @@
         <p class="section__title">Режисеры:</p>
         <p class="section__description">{{ film.directors.join(', ') }}</p>
       </div>
+      <div class="line" />
+      <div class="review">
+        <h3>Смотрели этот фильм?</h3>
+        <p>Самое время оставить отзыв о нем:</p>
+        <ul>
+          <li
+              v-for="reactions in reaction"
+              :key="reactions.id"
+          >
+            <button type="button" class="btn btn-outline-dark">
+              {{ reactions.title }}
+            </button>
+          </li>
+        </ul>
 
+      </div>
     </div>
   </div>
 
@@ -30,11 +45,18 @@
 
 <script>
 import films from '@/mocks/films.js'
+import {mapGetters} from "vuex"
 
 export default {
   data() {
     return {
       film: null
+    }
+  },
+  computed: {
+    ...mapGetters(['getReactions']),
+    reaction(){
+      return this.getReactions
     }
   },
   created() {
@@ -50,24 +72,20 @@ export default {
 .film-page {
   padding-bottom: 100px;
   .back {
-    color: #371111;
+    color: #351c1c;
     margin-left: 30px;
     margin-top: 30px;
   }
   h1 {
-    color: #501313;
-    margin-bottom: 30px;
+    color: #5a1414;
     padding-bottom: 15px;
     position: relative;
-    &::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 3px;
-      bottom: 0;
-      left: 0;
-      background: linear-gradient(90deg, #EB5804 0%, rgba(0,0,0,0) 90%);
-    }
+  }
+  .line {
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #EB5804 0%, rgba(0,0,0,0) 90%);
+    margin-bottom: 45px;
   }
   img {
     object-fit: cover;
@@ -84,10 +102,29 @@ export default {
       margin-bottom: 10px;
     }
     &__description {
-      color: #634949;
+      color: #6e1818;
       font-size: 18px;
       line-height: 30px;
     }
   }
+  .review {
+    h3 {
+      color: #aa4d0f;
+    }
+    p {
+      font-weight: 600;
+      font-size: 18px;
+      color: #EB5804;
+    }
+    ul {
+      padding-left: 0;
+      list-style: none;
+      display: flex;
+      li {
+        margin-right: 15px;
+      }
+    }
+  }
 }
 </style>
+

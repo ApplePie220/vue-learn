@@ -6,7 +6,7 @@
           v-if="isCatVisible"
           :class="[imgFilters]"
           :style="imgStyles"
-          src="../assets/cat.jpg"
+          src="../../assets/cat.jpg"
       >
       <p v-else>Кот скоро вернется.</p>
     </div>
